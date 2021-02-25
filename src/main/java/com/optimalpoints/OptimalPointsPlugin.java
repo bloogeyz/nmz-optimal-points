@@ -351,6 +351,7 @@ public class OptimalPointsPlugin extends Plugin {
         nmzBosses.add(new NMZBoss("The Untouchable", 13134, 39876));
         nmzBosses.add(new NMZBoss("The Everlasting", 8704, 27479));
         nmzBosses.add(new NMZBoss("The Inadequacy", 20595, 74380));
+        nmzBosses.add(new NMZBoss("Headless Beast", 1365, 12429));
     }
 
     @VisibleForTesting
