@@ -10,7 +10,7 @@ repositories {
 	mavenCentral()
 }
 
-def runeLiteVersion = '1.6.25'
+def runeLiteVersion = '1.7.3'
 
 dependencies {
 	compileOnly group: 'net.runelite', name:'client', version: runeLiteVersion
@@ -25,8 +25,18 @@ dependencies {
 	}
 }
 
+sourceSets {
+	main {
+		resources {
+			srcDir 'src/main/resources'
+			include '*.csv'
+			output.resourcesDir = 'build/resources/main'
+		}
+	}
+}
+
 group = 'com.optimalpoints'
-version = '1.1.0-SNAPSHOT'
+version = '1.2.0'
 sourceCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {

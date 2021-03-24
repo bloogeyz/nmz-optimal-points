@@ -40,13 +40,19 @@ public interface OptimalPointsConfig extends Config {
         return false;
     }
 
+    @ConfigItem(
+            position = 3,
+            keyName = "rankByDefense",
+            name = "Rank By Defense",
+            description = "If ticked, ranks enemies based on lowest defense instead of points given.")
+    default boolean rankByDefense() { return false; }
 
     @Range(
             min = 1,
             max = 4
     )
     @ConfigItem(
-            position = 3,
+            position = 4,
             keyName = "maxRankToShow",
             name = "Number of bosses to highlight",
             description = "Number of bosses to highlight in NMZ between 1-4"
@@ -56,7 +62,7 @@ public interface OptimalPointsConfig extends Config {
     }
 
     @ConfigItem(
-            position = 4,
+            position = 5,
             keyName = "npcColor1",
             name = "Highlight Color #1",
             description = "Color of the NPC highlight for the enemy worth the most points"
@@ -67,7 +73,7 @@ public interface OptimalPointsConfig extends Config {
     }
 
     @ConfigItem(
-            position = 5,
+            position = 6,
             keyName = "npcColor2",
             name = "Highlight Color #2",
             description = "Color of the NPC highlight for the enemy worth the second most points"
@@ -78,7 +84,7 @@ public interface OptimalPointsConfig extends Config {
     }
 
     @ConfigItem(
-            position = 6,
+            position = 7,
             keyName = "npcColor3",
             name = "Highlight Color #3",
             description = "Color of the NPC highlight for the enemy worth the third most points"
@@ -89,7 +95,7 @@ public interface OptimalPointsConfig extends Config {
     }
 
     @ConfigItem(
-            position = 7,
+            position = 8,
             keyName = "npcColor4",
             name = "Highlight Color #4",
             description = "Color of the NPC highlight for the enemy worth the least points"
