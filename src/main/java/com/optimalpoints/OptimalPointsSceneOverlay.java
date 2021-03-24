@@ -45,6 +45,7 @@ import java.awt.Polygon;
 import java.awt.BasicStroke;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -81,9 +82,19 @@ public class OptimalPointsSceneOverlay extends Overlay {
         if (bossDataList.size() == 0) {
             return null;
         }
+        if (!config.rankByDefense())
+        {
+            bossDataList.sort(new PointsComparer());
+            Collections.reverse(bossDataList);
+        }
+        else
+        {
+            bossDataList.sort(new DefenseComparer());
+        }
         int rank = 1;
         for (CurrentBossData bossData : bossDataList) {
-            renderNpcOverlay(graphics, bossData.getNpcData(), bossData.getScore(), rank);
+            renderNpcOverlay(graphics, bossData.getNpcData(),config.rankByDefense() ? bossData.getDefense_score() :
+                    bossData.getPoints_score(), rank);
             rank++;
         }
         return null;
