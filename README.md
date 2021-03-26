@@ -3,7 +3,10 @@ A plugin that uses coloured highlights and text to show players the optimal enem
 
 Code is adapted from the NPC Highlight plugin.
 
-Known issues:
-- The normal scores for the Corrupt Lizardman, Elven Traitor and Essyllt were found by me as they weren't originally on the wiki, if you notice anything wrong with them let me know.       
+Release Notes:
+[1.2.0]
+- Feature request for ranking by lowest defense. There is now a checkbox in the plugin config for turning this on, it will hopefully display the boss' defence value and highlight from lowest-highest
+- Finally taught myself how to properly include the csv via gradle, this hopefully means nothing looks different from the user end but makes it easier for me to add bosses and columns going forward
+
+Known issues:     
 - The highlighting doesn't work on Nazastarool's additonal forms         
-- Not every boss has been tested, so please let me know if you encounter a boss that doesn't highlight
