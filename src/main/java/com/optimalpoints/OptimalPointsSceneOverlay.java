@@ -85,7 +85,6 @@ public class OptimalPointsSceneOverlay extends Overlay {
         if (!config.rankByDefense())
         {
             bossDataList.sort(new PointsComparer());
-            Collections.reverse(bossDataList);
         }
         else
         {
