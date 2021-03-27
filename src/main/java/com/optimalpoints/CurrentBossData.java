@@ -32,7 +32,7 @@ class PointsComparer implements Comparator<CurrentBossData> {
     public int compare(CurrentBossData o1, CurrentBossData o2) {
         Integer score1 = o1.getPoints_score();
         Integer score2 = o2.getPoints_score();
-        return score1.compareTo(score2);
+        return score2.compareTo(score1);
     }
 }
 
