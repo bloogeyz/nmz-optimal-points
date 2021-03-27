@@ -3,6 +3,8 @@ A plugin that uses coloured highlights and text to show players the optimal enem
 
 Code is adapted from the NPC Highlight plugin.
 
+If you ever want to say hello in game my IGN is *MilkTrucker*.
+
 Release Notes:
 [1.2.0]
 - Feature request for ranking by lowest defense. There is now a checkbox in the plugin config for turning this on, it will hopefully display the boss' defence value and highlight from lowest-highest
