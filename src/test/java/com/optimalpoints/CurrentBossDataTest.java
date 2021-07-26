@@ -96,6 +96,11 @@ class TestNPC implements NPC{
     }
 
     @Override
+    public int getCurrentOrientation() {
+        return 0;
+    }
+
+    @Override
     public int getAnimation() {
         return 0;
     }
@@ -161,7 +166,17 @@ class TestNPC implements NPC{
     }
 
     @Override
+    public int getAnimationFrame() {
+        return 0;
+    }
+
+    @Override
     public void setActionFrame(int actionFrame) {
+
+    }
+
+    @Override
+    public void setAnimationFrame(int frame) {
 
     }
 
@@ -173,6 +188,11 @@ class TestNPC implements NPC{
     @Override
     public void setGraphic(int graphic) {
 
+    }
+
+    @Override
+    public int getSpotAnimFrame() {
+        return 0;
     }
 
     @Override
@@ -228,6 +248,16 @@ class TestNPC implements NPC{
 
     @Override
     public void setOverheadText(String overheadText) {
+
+    }
+
+    @Override
+    public int getOverheadCycle() {
+        return 0;
+    }
+
+    @Override
+    public void setOverheadCycle(int cycles) {
 
     }
 
