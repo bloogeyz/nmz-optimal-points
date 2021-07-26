@@ -5,10 +5,7 @@ Code is adapted from the NPC Highlight plugin.
 
 If you ever want to say hello in game my IGN is *MilkTrucker*.
 
-Release Notes:
-[1.2.0]
-- Feature request for ranking by lowest defense. There is now a checkbox in the plugin config for turning this on, it will hopefully display the boss' defence value and highlight from lowest-highest
-- Finally taught myself how to properly include the csv via gradle, this hopefully means nothing looks different from the user end but makes it easier for me to add bosses and columns going forward
+[Release Notes](/CHANGELOG.md)
 
-Known issues:     
-- The highlighting doesn't work on Nazastarool's additonal forms         
+Known issues:
+- The highlighting doesn't work on Nazastarool's additonal forms
