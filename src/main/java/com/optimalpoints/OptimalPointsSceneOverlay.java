@@ -156,7 +156,7 @@ public class OptimalPointsSceneOverlay extends Overlay {
     private void renderPoly(Graphics2D graphics, Color color, Shape polygon) {
         if (polygon != null) {
             graphics.setColor(color);
-            graphics.setStroke(new BasicStroke(2));
+            graphics.setStroke(new BasicStroke(config.borderWidth()));
             graphics.draw(polygon);
             graphics.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), 20));
             graphics.fill(polygon);
