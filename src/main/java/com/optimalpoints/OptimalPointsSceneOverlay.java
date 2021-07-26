@@ -35,6 +35,7 @@ import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayLayer;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.OverlayUtil;
+import net.runelite.client.ui.overlay.outline.ModelOutlineRenderer;
 
 import javax.inject.Inject;
 import java.awt.Color;
@@ -61,12 +62,14 @@ public class OptimalPointsSceneOverlay extends Overlay {
     private final Client client;
     private final OptimalPointsConfig config;
     private final OptimalPointsPlugin plugin;
+    private final ModelOutlineRenderer modelOutlineRenderer;
 
     @Inject
-    OptimalPointsSceneOverlay(Client client, OptimalPointsConfig config, OptimalPointsPlugin plugin) {
+    OptimalPointsSceneOverlay(Client client, OptimalPointsConfig config, OptimalPointsPlugin plugin, ModelOutlineRenderer modelOutlineRenderer) {
         this.client = client;
         this.config = config;
         this.plugin = plugin;
+        this.modelOutlineRenderer = modelOutlineRenderer;
         setPosition(OverlayPosition.DYNAMIC);
         setLayer(OverlayLayer.ABOVE_SCENE);
     }
@@ -114,6 +117,10 @@ public class OptimalPointsSceneOverlay extends Overlay {
         if (config.highlightHull()) {
             Shape objectClickbox = actor.getConvexHull();
             renderPoly(graphics, colour, objectClickbox);
+        }
+
+        if (config.highlightOutline()) {
+            modelOutlineRenderer.drawOutline(actor, config.borderWidth(), colour, config.outlineFeather());
         }
 
         if (config.highlightTile()) {
