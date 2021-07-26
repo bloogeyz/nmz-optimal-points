@@ -45,7 +45,6 @@ import java.awt.Polygon;
 import java.awt.BasicStroke;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
