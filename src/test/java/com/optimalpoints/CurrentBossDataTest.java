@@ -321,4 +321,41 @@ class TestNPC implements NPC{
     public long getHash() {
         return 0;
     }
+
+    @Override
+    public void setIdleRotateLeft(int animation)  {
+    }
+
+    @Override
+    public void setIdleRotateRight(int animation)  {
+    }
+
+    @Override
+    public void setWalkAnimation(int animation)  {
+    }
+
+    @Override
+    public void setWalkRotateLeft(int animation)  {
+    }
+
+    @Override
+    public void setWalkRotateRight(int animation)  {
+    }
+
+    @Override
+    public void setWalkRotate180(int animation)  {
+    }
+
+    @Override
+    public void setGraphicHeight(int height)  {
+    }
+
+    @Override
+    public int getGraphicHeight()  {
+        return 0;
+    }
+
+    @Override
+    public void setRunAnimation(int animation)  {
+    }
 }
